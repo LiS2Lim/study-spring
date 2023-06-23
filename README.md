@@ -2,8 +2,8 @@
 
 <pre>
   public class StudySpring {
-    private String title = "Jump to Spring boot";
-    private String studySourceURL = "<a href="https://wikidocs.net/book/7601">https://wikidocs.net/book/7601</a>";
+    private final String STUDY_SOURCE_URL = "<a href="https://wikidocs.net/book/7601">https://wikidocs.net/book/7601</a>";
+    private final String STUDY_SOURCE_TITLE = "Jump to Spring boot";
     private enum Contents = {
       第01_01_開発準備,
       第02_01_SPRING_BOOTの構造,
