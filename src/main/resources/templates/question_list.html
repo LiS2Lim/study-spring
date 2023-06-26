@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Question list</title>
-	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
-</head>
-<body>
-	<div class="container my-3">
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content" class="container my-3">
 		<table class="table">
 			<thead class="table-dark">
 				<tr>
@@ -27,5 +19,4 @@
 			</tbody>
 		</table>
 	</div>
-</body>
 </html>
