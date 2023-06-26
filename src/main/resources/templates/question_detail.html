@@ -8,5 +8,18 @@
 <body>
 	<h1 th:text="${question.subject}">subject</h1>
 	<div th:text="${question.content}">content</div>
+	<h5 th:text="|${#lists.size(question.answerList)}個の回答があります|"></h5>
+	<div>
+		<ul>
+			<li th:each="answer : ${question.answerList}" th:text="${answer.content}"></li>
+		</ul>
+	</div>
+	
+	<form th:action="@{|/answer/create/${question.id}|}" method="post">
+		<textarea name="content" id="content" rows="15"></textarea>
+		<input type="submit" value="回答登録" />
+	</form>
+	
+	<a th:href="@{/}" th:text="ホームに戻る"></a>
 </body>
 </html>
