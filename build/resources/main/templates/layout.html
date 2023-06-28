@@ -11,6 +11,13 @@
     <title>spring board</title>
 </head>
 <body>
+	<!-- Navbar block -->
+	<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+	<!-- Content block -->
 	<th:block layout:fragment="content"></th:block>
+
+	<!-- Bootstrap JS -->
+	<script th:src="@{/bootstrap.min.js}"></script>
 </body>
 </html>
