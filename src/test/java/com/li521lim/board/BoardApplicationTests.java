@@ -9,20 +9,21 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.li521lim.board.question.Question;
 import com.li521lim.board.question.QuestionRepository;
+import com.li521lim.board.question.QuestionService;
 
 @SpringBootTest
 class BoardApplicationTests {
 	
 	@Autowired
-	private QuestionRepository questionRepository;
+	private QuestionService questionService;
 
 	@Test
 	void testJpa() {
-		List<Question> all = this.questionRepository.findAll();
-		assertEquals(2, all.size());
-		
-		Question q = all.get(0);
-		assertEquals("what is this board ?", q.getSubject());
+		for (int i = 1; i <= 300; i++) {
+			String subject = String.format("テストデータです[%03d]", i);
+			String content = "テスト用のデータ";
+			this.questionService.create(subject, content);
+		}
 	}
 
 }
