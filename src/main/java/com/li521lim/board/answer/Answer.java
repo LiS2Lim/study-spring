@@ -3,6 +3,7 @@ package com.li521lim.board.answer;
 import java.time.LocalDateTime;
 
 import com.li521lim.board.question.Question;
+import com.li521lim.board.user.SiteUser;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -23,4 +24,7 @@ public class Answer {
 	
 	@ManyToOne
 	private Question question;
+	
+	@ManyToOne
+	private SiteUser author;
 }

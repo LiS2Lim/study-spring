@@ -19,11 +19,6 @@ class BoardApplicationTests {
 
 	@Test
 	void testJpa() {
-		for (int i = 1; i <= 300; i++) {
-			String subject = String.format("テストデータです[%03d]", i);
-			String content = "テスト用のデータ";
-			this.questionService.create(subject, content);
-		}
 	}
 
 }
